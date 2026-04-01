@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <!-- Header Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <ImageView
+                android:id="@+id/ivStatus"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:src="@drawable/ic_online"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Rajesh Kumar"
+                android:textColor="@color/textPrimary"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvPerformance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="85%"
+                android:textColor="@color/success"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!-- Role and Village -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:id="@+id/tvRole"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="System Administrator"
+                android:textColor="@color/textSecondary"
+                android:textSize="13sp"
+                android:drawablePadding="4dp"
+                 />
+
+            <TextView
+                android:id="@+id/tvVillage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Himalayan Village"
+                android:textColor="@color/textSecondary"
+                android:textSize="12sp"
+                android:drawablePadding="4dp"
+                android:drawableStart="@drawable/ic_village_small" />
+
+        </LinearLayout>
+
+        <!-- Performance Progress -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="Performance"
+                android:textColor="@color/textSecondary"
+                android:textSize="11sp" />
+
+            <ProgressBar
+                android:id="@+id/progressPerformance"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="0dp"
+                android:layout_height="4dp"
+                android:layout_weight="1"
+                android:max="100"
+                android:progress="85"
+                android:progressTint="@color/success" />
+
+        </LinearLayout>
+
+        <!-- Tasks and Response Time -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:id="@+id/tvTasks"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="12/15 tasks"
+                android:textColor="@color/textSecondary"
+                android:textSize="11sp"
+                android:drawablePadding="4dp"
+                android:drawableStart="@drawable/ic_task" />
+
+            <TextView
+                android:id="@+id/tvResponseTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5 min avg"
+                android:textColor="@color/textSecondary"
+                android:textSize="11sp"
+                android:drawablePadding="4dp"
+                 />
+
+        </LinearLayout>
+
+        <!-- Last Active and Actions -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tvLastActive"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Active: 2 days ago"
+                android:textColor="@color/textSecondary"
+                android:textSize="10sp" />
+
+            <ImageView
+                android:id="@+id/btnMessage"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_message"
+                android:padding="6dp"
+                android:background="?selectableItemBackgroundBorderless"
+                android:layout_marginEnd="4dp" />
+
+            <ImageView
+                android:id="@+id/btnPerformance"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_trending"
+                android:padding="6dp"
+                android:background="?selectableItemBackgroundBorderless" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

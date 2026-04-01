@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@color/bgWhite">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="16dp">
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_report"
+            app:tint="@color/primaryGreen"
+            android:layout_marginEnd="12dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Generate Report"
+            android:textColor="@color/textPrimary"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <!-- Report Type Selection -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Report Type"
+        android:textColor="@color/textPrimary"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipGroupReportType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:singleSelection="true">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipDistrict"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="District Overview"
+            android:checked="true"
+            app:chipBackgroundColor="@color/chip_colors"
+            app:chipStrokeWidth="1dp"
+            app:chipStrokeColor="@color/primaryGreen" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipVillage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Village Analytics"
+            app:chipBackgroundColor="@color/chip_colors" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipBudget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Budget Tracking"
+            app:chipBackgroundColor="@color/chip_colors" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipDisaster"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Disaster Reports"
+            app:chipBackgroundColor="@color/chip_colors" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipPerformance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Performance"
+            app:chipBackgroundColor="@color/chip_colors" />
+
+    </com.google.android.material.chip.ChipGroup>
+
+    <!-- Date Range Selection -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Date Range"
+        android:textColor="@color/textPrimary"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLastMonth"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:text="Last Month"
+            android:textSize="12sp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLastQuarter"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:text="Last Quarter"
+            android:textSize="12sp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLastYear"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:text="Last Year"
+            android:textSize="12sp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp" />
+
+    </LinearLayout>
+
+    <!-- Custom Date Range (Collapsible) -->
+    <LinearLayout
+        android:id="@+id/layoutCustomDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="From:"
+                android:textColor="@color/textSecondary"
+                android:textSize="14sp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnStartDate"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:text="Select Date"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="To:"
+                android:textColor="@color/textSecondary"
+                android:textSize="14sp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnEndDate"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:text="Select Date"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Custom Date Range Toggle -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnCustomRange"
+        style="@style/Widget.Material3.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:text="Custom Range"
+        android:textColor="@color/primaryGreen"
+        android:textSize="12sp" />
+
+    <!-- Format Options -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Format"
+        android:textColor="@color/textPrimary"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipGroupFormat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:singleSelection="true">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipPDF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PDF"
+            android:checked="true"
+            app:chipIcon="@drawable/ic_pdf"
+            app:chipIconTint="@color/dangerRed"
+            app:chipBackgroundColor="@color/chip_colors" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipExcel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Excel"
+            app:chipIcon="@drawable/img_42"
+
+            app:chipBackgroundColor="@color/chip_colors" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipPowerPoint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PowerPoint"
+            app:chipIcon="@drawable/img_43"
+
+            app:chipBackgroundColor="@color/chip_colors" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipCSV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CSV"
+            app:chipIcon="@drawable/img_44"
+
+            app:chipBackgroundColor="@color/chip_colors" />
+
+    </com.google.android.material.chip.ChipGroup>
+
+    <!-- Include Charts -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Include"
+        android:textColor="@color/textPrimary"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <CheckBox
+            android:id="@+id/cbCharts"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Charts &amp; Graphs"
+            android:checked="true"
+            android:textColor="@color/textPrimary" />
+
+        <CheckBox
+            android:id="@+id/cbTables"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Data Tables"
+            android:checked="true"
+            android:textColor="@color/textPrimary" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="24dp">
+
+        <CheckBox
+            android:id="@+id/cbSummary"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Executive Summary"
+            android:checked="true"
+            android:textColor="@color/textPrimary" />
+
+        <CheckBox
+            android:id="@+id/cbRecommendations"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Recommendations"
+            android:checked="true"
+            android:textColor="@color/textPrimary" />
+
+    </LinearLayout>
+
+    <!-- Divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Action Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCancel"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:textColor="@color/textSecondary" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnGenerate"
+            style="@style/Widget.Material3.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Generate"
+            android:backgroundTint="@color/primaryGreen" />
+
+    </LinearLayout>
+
+</LinearLayout>

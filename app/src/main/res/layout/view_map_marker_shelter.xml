@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:tag="shelter">
+
+    <ImageView
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/ic_marker_shelter"
+        android:elevation="4dp" />
+
+    <TextView
+        android:id="@+id/tvMarkerTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#CCFFFFFF"
+        android:paddingVertical="2dp"
+        android:paddingHorizontal="4dp"
+        android:text="Shelter Name"
+        android:textColor="@color/textPrimary"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:elevation="2dp" />
+
+</LinearLayout>

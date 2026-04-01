@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:tag="village">
+
+    <ImageView
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/img_48"
+        android:elevation="4dp" />
+
+    <TextView
+        android:id="@+id/tvMarkerTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#CCFFFFFF"
+        android:paddingVertical="2dp"
+        android:paddingHorizontal="4dp"
+        android:text="Village Name"
+        android:textColor="@color/textPrimary"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:elevation="2dp" />
+
+    <TextView
+        android:id="@+id/tvMarkerSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#CCFFFFFF"
+        android:paddingVertical="2dp"
+        android:paddingHorizontal="4dp"
+        android:text="Population: 2.5K"
+        android:textColor="@color/textSecondary"
+        android:textSize="8sp"
+        android:elevation="2dp" />
+
+</LinearLayout>

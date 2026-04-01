@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.EcoGeoGuard" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+
+    <style name="Theme.EcoGeoGuard" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/primaryGreen</item>
+        <item name="colorSecondary">@color/secondaryGreen</item>
+        <item name="android:statusBarColor">@color/primaryGreen</item>
+        <item name="android:windowBackground">@color/bgLight</item>
+    </style>
+
+</resources>

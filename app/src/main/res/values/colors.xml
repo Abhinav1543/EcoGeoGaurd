@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Colors -->
+    <color name="primaryGreen">#0D6F3D</color>
+    <color name="primaryGreenLight">#1C9D5C</color>
+    <color name="primaryGreenDark">#08522E</color>
+    <color name="secondaryGreen">#2E7D32</color>
+
+    <!-- Secondary Colors -->
+    <color name="earthBlue">#2A5C8B</color>
+    <color name="earthBlueLight">#E8F4F8</color>
+    <color name="sunsetOrange">#FF6B35</color>
+    <color name="forestBrown">#8B4513</color>
+
+    <!-- Neutral Colors -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
+
+    <!-- Background Colors -->
+    <color name="bgLight">#F8F9FA</color>
+    <color name="bgWhite">#FFFFFF</color>
+    <color name="bgCard">#FFFFFF</color>
+    <color name="bgDark">#212529</color>
+
+    <!-- Card Colors -->
+    <color name="cardBgLight">#F8FCF8</color>
+    <color name="cardStroke">#E0E0E0</color>
+
+    <!-- Text Colors -->
+    <color name="textPrimary">#212529</color>
+    <color name="textSecondary">#6C757D</color>
+    <color name="textLight">#ADB5BD</color>
+    <color name="textInverse">#FFFFFF</color>
+    <color name="textOnPrimary">#FFFFFF</color>
+
+    <!-- Status Colors -->
+    <color name="success">#28A745</color>
+    <color name="successLight">#D5E8D4</color>
+    <color name="warning">#FFC107</color>
+    <color name="warningAmber">#FFC107</color>
+    <color name="error">#DC3545</color>
+    <color name="info">#17A2B8</color>
+
+    <!-- Alert Colors -->
+    <color name="alertRed">#D32F2F</color>
+    <color name="dangerRed">#D32F2F</color>
+    <color name="safeGreen">#2E7D32</color>
+    <color name="mediumRisk">#FF9800</color>
+    <color name="lowRisk">#4CAF50</color>
+    <color name="criticalRed">#B71C1C</color>
+    <color name="warningOrange">#FF9800</color>
+    <color name="cautionYellow">#FFC107</color>
+
+
+    <!-- Button Colors -->
+    <color name="buttonPrimary">#0D6F3D</color>
+    <color name="buttonPrimaryDark">#08522E</color>
+    <color name="buttonSecondary">#6C757D</color>
+    <color name="buttonGoogle">#FFFFFF</color>
+    <color name="buttonGoogleText">#212529</color>
+    <color name="buttonBorder">#DEE2E6</color>
+    <color name="buttonDisabled">#E9ECEF</color>
+
+    <!-- UI Element Colors -->
+    <color name="progressTrack">#E0E0E0</color>
+    <color name="divider">#E0E0E0</color>
+    <color name="shadow">#1A000000</color>
+    <color name="overlay">#80000000</color>
+
+    <!-- Bottom Navigation Colors -->
+    <!-- This is a color state list reference -->
+    <color name="bottom_nav_colors">@color/bottom_nav_color_state</color>
+    <color name="cardBg1">#F8FCF8</color>
+
+
+    <!-- Add these inside your <resources> tag after your existing colors -->
+
+    <!-- Sensor & Status Colors (Critical for Farmer Dashboard) -->
+    <color name="sensor_normal">#4CAF50</color>      <!-- Green - Good condition -->
+    <color name="sensor_warning">#FF9800</color>     <!-- Orange - Warning -->
+    <color name="sensor_critical">#F44336</color>    <!-- Red - Critical -->
+    <color name="sensor_info">#2196F3</color>        <!-- Blue - Informational -->
+
+    <!-- Soil Moisture Specific -->
+    <color name="moisture_low">#F44336</color>       <!-- Red - Too dry -->
+    <color name="moisture_optimal">#4CAF50</color>   <!-- Green - Perfect -->
+    <color name="moisture_high">#2196F3</color>      <!-- Blue - Too wet -->
+
+    <!-- Temperature Specific -->
+    <color name="temp_normal">#4CAF50</color>         <!-- Green - Normal -->
+    <color name="temp_high">#FF9800</color>           <!-- Orange - Hot -->
+    <color name="temp_critical">#F44336</color>       <!-- Red - Extreme heat -->
+    <color name="temp_low">#2196F3</color>            <!-- Blue - Cold -->
+
+    <!-- Rainfall Intensity -->
+    <color name="rain_light">#90CAF9</color>          <!-- Light blue - Light rain -->
+    <color name="rain_moderate">#42A5F5</color>       <!-- Medium blue - Moderate -->
+    <color name="rain_heavy">#1E88E5</color>          <!-- Dark blue - Heavy -->
+    <color name="rain_extreme">#0D47A1</color>        <!-- Navy - Extreme -->
+
+    <!-- Alert Severity Backgrounds -->
+    <color name="alert_bg_low">#E8F5E8</color>        <!-- Light green bg -->
+    <color name="alert_bg_moderate">#FFF3E0</color>   <!-- Light orange bg -->
+    <color name="alert_bg_high">#FFE5E5</color>       <!-- Light red bg -->
+    <color name="alert_bg_critical">#FFE5E5</color>   <!-- Light red bg - can be same -->
+
+    <!-- Chart Colors -->
+    <color name="chart_risk">#FF6B6B</color>          <!-- Coral red for risk -->
+    <color name="chart_risk_fill">#22FF6B6B</color>   <!-- Transparent coral -->
+    <color name="chart_sensor_healthy">#4CAF50</color> <!-- Green for healthy -->
+    <color name="chart_sensor_warning">#FFC107</color> <!-- Yellow for warning -->
+    <color name="chart_sensor_critical">#F44336</color> <!-- Red for critical -->
+
+    <!-- Emergency/Overlay -->
+    <color name="emergency_overlay_red">#CCFF0000</color> <!-- Semi-transparent red -->
+    <color name="emergency_text">#FFFFFF</color>           <!-- White text on emergency -->
+    <color name="emergency_button_bg">#33FFFFFF</color>    <!-- Semi-transparent white -->
+
+    <!-- Gradient Colors (for modern UI effects) -->
+    <color name="gradient_start_primary">#0D6F3D</color>
+    <color name="gradient_end_primary">#1C9D5C</color>
+    <color name="gradient_start_warning">#FF9800</color>
+    <color name="gradient_end_warning">#FFC107</color>
+    <color name="gradient_start_danger">#D32F2F</color>
+    <color name="gradient_end_danger">#F44336</color>
+
+    <!-- Progress Bar Colors -->
+    <color name="progress_green">#4CAF50</color>
+    <color name="progress_orange">#FF9800</color>
+    <color name="progress_red">#F44336</color>
+    <color name="progress_blue">#2196F3</color>
+
+    <!-- Irrigation Specific -->
+    <color name="irrigation_recommended">#FF9800</color>   <!-- Orange for recommended -->
+    <color name="irrigation_not_needed">#4CAF50</color>    <!-- Green for not needed -->
+
+    <!-- Status Bar Colors (for different alert states) -->
+    <color name="status_normal">#0D6F3D</color>
+    <color name="status_warning">#FF9800</color>
+    <color name="status_alert">#D32F2F</color>
+    <color name="status_critical">#B71C1C</color>
+
+    <!-- Card Background Variations -->
+    <color name="card_bg_normal">#FFFFFF</color>
+    <color name="card_bg_alert">#FFF5F5</color>        <!-- Light red tint for alert cards -->
+    <color name="card_bg_warning">#FFF9E6</color>      <!-- Light yellow tint -->
+    <color name="card_bg_success">#F0F9F0</color>      <!-- Light green tint -->
+
+    <!-- Text on Colored Backgrounds -->
+    <color name="text_on_danger">#FFFFFF</color>
+    <color name="text_on_warning">#000000</color>
+    <color name="text_on_success">#FFFFFF</color>
+    <color name="text_on_info">#FFFFFF</color>
+
+    <!-- Icon Tint Colors -->
+    <color name="icon_normal">#6C757D</color>          <!-- Gray for normal icons -->
+    <color name="icon_active">#0D6F3D</color>          <!-- Green for active -->
+    <color name="icon_alert">#D32F2F</color>           <!-- Red for alert -->
+
+    <!-- Shadow and Elevation -->
+    <color name="shadow_light">#0D000000</color>       <!-- Light shadow -->
+    <color name="shadow_medium">#1A000000</color>      <!-- Medium shadow (you have this) -->
+    <color name="shadow_dark">#33000000</color>        <!-- Dark shadow -->
+
+    <!-- Separator/Divider -->
+    <color name="separator_light">#F0F0F0</color>
+    <color name="separator_medium">#E0E0E0</color>     <!-- You have divider already -->
+
+    <!-- Skeleton/Loading States -->
+    <color name="skeleton_base">#E0E0E0</color>
+    <color name="skeleton_highlight">#F5F5F5</color>
+
+    <!-- Data Visualization -->
+    <color name="viz_primary">#0D6F3D</color>
+    <color name="viz_secondary">#FF6B35</color>
+    <color name="viz_tertiary">#2A5C8B</color>
+    <color name="viz_quaternary">#8B4513</color>
+
+    <!-- Badge Colors -->
+    <color name="badge_red">#D32F2F</color>
+    <color name="badge_green">#2E7D32</color>
+    <color name="badge_orange">#FF9800</color>
+    <color name="badge_blue">#1976D2</color>
+    <color name="badge_yellow">#FFC107</color>
+    <color name="badge_purple">#7B1FA2</color>
+
+    <!-- Ripple Effect Colors -->
+    <color name="ripple_primary">#1A0D6F3D</color>     <!-- Transparent primary -->
+    <color name="ripple_white">#1AFFFFFF</color>       <!-- Transparent white -->
+    <color name="ripple_dark">#1A000000</color>        <!-- Transparent black -->
+
+    <!-- Disabled States -->
+    <color name="disabled_text">#9E9E9E</color>
+    <color name="disabled_bg">#E0E0E0</color>
+    <color name="disabled_border">#BDBDBD</color>
+
+    <!-- Highlight Colors -->
+    <color name="highlight_blue">#E3F2FD</color>       <!-- Light blue highlight -->
+    <color name="highlight_green">#E8F5E9</color>      <!-- Light green highlight -->
+    <color name="highlight_yellow">#FFF9C4</color>     <!-- Light yellow highlight -->
+
+    <!-- Additional Emergency Colors -->
+    <color name="emergency_light_red">#FFCDD2</color>  <!-- Very light red -->
+    <color name="emergency_dark_red">#B71C1C</color>   <!-- Very dark red -->
+    <color name="emergency_flash">#FFFF0000</color>    <!-- Pure red flash -->
+
+    <!-- Network/Signal Colors -->
+    <color name="signal_good">#4CAF50</color>
+    <color name="signal_fair">#FFC107</color>
+    <color name="signal_poor">#FF9800</color>
+    <color name="signal_no">#F44336</color>
+
+    <!-- Battery Level Colors -->
+    <color name="battery_high">#4CAF50</color>
+    <color name="battery_medium">#FFC107</color>
+    <color name="battery_low">#FF9800</color>
+    <color name="battery_critical">#F44336</color>
+
+    <color name="chip_colors">#E8F5E9</color>
+
+
+
+</resources>

@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/auth_nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <!-- ================= SPLASH ================= -->
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.ecogeoguard.ui.auth.SplashFragment"
+        android:label="Splash"
+        tools:layout="@layout/fragment_splash">
+
+        <action
+            android:id="@+id/action_splashFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+
+        <action
+            android:id="@+id/action_splashFragment_to_adminDashboardFragment"
+            app:destination="@id/adminDashboardFragment" />
+
+        <action
+            android:id="@+id/action_splashFragment_to_farmerDashboardFragment"
+            app:destination="@id/farmerDashboardFragment" />
+
+        <action
+            android:id="@+id/action_splashFragment_to_LiveStockDashboardFragment"
+            app:destination="@id/livestockDashboardFragment" />
+
+        <action
+            android:id="@+id/action_splashFragment_to_disasterDashboardFragment"
+            app:destination="@id/disasterDashboardFragment" />
+
+        <action
+            android:id="@+id/action_splashFragment_to_govtDashboardFragment"
+            app:destination="@id/governmentDashboardFragment" />
+
+
+        <action
+            android:id="@+id/actionSplashFragmentToDashboardFragment"
+            app:destination="@+id/dashboardFragment">
+        <argument
+            android:name="userRole"
+            app:argType="string" />
+        <argument
+            android:name="userName"
+            app:argType="string" />
+        </action>
+    </fragment>
+
+    <!-- ================= LOGIN ================= -->
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.ecogeoguard.ui.auth.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login_enhanced">
+
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+
+        <action
+            android:id="@+id/action_loginFragment_to_forgotPasswordFragment"
+            app:destination="@id/forgotPasswordFragment" />
+
+        <action
+            android:id="@+id/action_loginFragment_to_completeRegistrationFragment"
+            app:destination="@id/completeteRegistrationFragment" />
+
+        <action
+            android:id="@+id/action_loginFragment_to_adminDashboardFragment"
+            app:destination="@id/adminDashboardFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_farmerDashboardFragment"
+            app:destination="@id/farmerDashboardFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_LiveStockDashboardFragment"
+            app:destination="@id/livestockDashboardFragment" />
+
+        <action
+            android:id="@+id/action_loginFragment_to_disasterDashboardFragment"
+            app:destination="@id/disasterDashboardFragment" />
+
+        <action
+            android:id="@+id/action_loginFragment_to_govtDashboardFragment"
+            app:destination="@id/governmentDashboardFragment" />
+
+        <action
+            android:id="@+id/action_loginFragment_to_DashboardFragment"
+            app:destination="@+id/dashboardFragment">
+            <argument
+                android:name="userRole"
+                app:argType="string" />
+            <argument
+                android:name="userName"
+                app:argType="string" />
+        </action>
+    </fragment>
+
+    <!-- ================= REGISTER ================= -->
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.ecogeoguard.ui.auth.RegisterFragment"
+        android:label="Register"
+        tools:layout="@layout/fragment_register_enhanced">
+
+        <action
+            android:id="@+id/action_registerFragment_to_accountVerificationFragment"
+            app:destination="@id/accountVerificationFragment" />
+
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+
+    <!-- ================= ACCOUNT VERIFICATION ================= -->
+    <fragment
+        android:id="@+id/accountVerificationFragment"
+        android:name="com.example.ecogeoguard.ui.auth.AccountVerificationFragment"
+        android:label="Account Verification"
+        tools:layout="@layout/fragment_account_verification">
+
+        <action
+            android:id="@+id/action_accountVerificationFragment_to_completeRegistrationFragment"
+            app:destination="@id/completeteRegistrationFragment" />
+
+        <action
+            android:id="@+id/action_accountVerificationFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+    </fragment>
+
+    <!-- ================= COMPLETE REGISTRATION ================= -->
+    <fragment
+        android:id="@+id/completeteRegistrationFragment"
+        android:name="com.example.ecogeoguard.ui.auth.CompleteRegistrationFragment"
+        android:label="Complete Registration"
+        tools:layout="@layout/fragment_complete_registration">
+
+        <action
+            android:id="@+id/action_completeRegistrationFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+
+    <!-- ================= FORGOT PASSWORD ================= -->
+    <fragment
+        android:id="@+id/forgotPasswordFragment"
+        android:name="com.example.ecogeoguard.ui.auth.ForgotPasswordFragment"
+        android:label="Forgot Password"
+        tools:layout="@layout/fragment_forgot_password">
+
+        <action
+            android:id="@+id/action_forgotPasswordFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.example.ecogeoguard.ui.dashboard.DashboardFragment"
+        android:label="Dashboard"
+        tools:layout="@layout/fragment_dashboard">
+
+        <argument
+            android:name="userRole"
+            app:argType="string" />
+        <argument
+            android:name="userName"
+            app:argType="string" />
+    </fragment>
+
+    <!-- ================= ADMIN DASHBOARD ================= -->
+    <fragment
+        android:id="@+id/adminDashboardFragment"
+        android:name="com.example.ecogeoguard.ui.admin.AdminDashboardFragment"
+        android:label="Admin Dashboard"
+        tools:layout="@layout/fragment_admin_dashboard">
+
+        <action
+            android:id="@+id/action_adminDashboardFragment_to_userManagementFragment"
+            app:destination="@id/userManagementFragment" />
+
+        <action
+            android:id="@+id/action_adminDashboardFragment_to_villageManagerFragment"
+            app:destination="@id/villageManagerFragment" />
+
+        <action
+            android:id="@+id/action_adminDashboardFragment_to_sensorNetworkFragment"
+            app:destination="@id/sensorNetworkFragment" />
+
+        <action
+            android:id="@+id/action_adminDashboardFragment_to_analyticsFragment"
+            app:destination="@id/analyticsFragment" />
+
+        <action
+            android:id="@+id/action_adminDashboardFragment_to_alertConfigFragment"
+            app:destination="@id/alertConfigFragment" />
+
+        <action
+            android:id="@+id/action_adminDashboardFragment_to_systemSettingsFragment"
+            app:destination="@id/systemSettingsFragment" />
+
+        <action
+            android:id="@+id/action_adminDashboardFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+
+        <action
+            android:id="@+id/action_adminDashboardFragment_to_notificationsFragment"
+            app:destination="@id/notificationsFragment" />
+
+        <action
+            android:id="@+id/action_adminDashboardFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/auth_nav_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+
+    <!-- In nav_graph.xml, add: -->
+    <!-- In the farmerDashboardFragment section, add: -->
+    <fragment
+        android:id="@+id/farmerDashboardFragment"
+        android:name="com.example.ecogeoguard.ui.farmer.FarmerDashboardFragment"
+        android:label="Farmer Dashboard"
+        tools:layout="@layout/fragment_farmer_dashboard">
+
+        <action
+            android:id="@+id/action_farmerDashboardFragment_to_fieldDetailFragment"
+            app:destination="@id/fieldDetailFragment" />
+
+        <action
+            android:id="@+id/action_farmerDashboardFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/auth_nav_graph"
+            app:popUpToInclusive="true" />
+
+    </fragment>
+
+    <!-- Add this fragment if it doesn't exist -->
+    <fragment
+        android:id="@+id/fieldDetailFragment"
+        android:name="com.example.ecogeoguard.ui.farmer.FieldDetailFragment"
+        android:label="Field Details"
+        tools:layout="@layout/fragment_field_detail" />
+
+    <fragment
+        android:id="@+id/livestockDashboardFragment"
+        android:name="com.example.ecogeoguard.ui.livestock.LivestockDashboardFragment"
+        android:label="Livestock Dashboard"
+        tools:layout="@layout/fragment_livestock_dashboard">
+
+        <action
+            android:id="@+id/action_livestockDashboardFragment_to_animalDetailFragment"
+            app:destination="@id/animalDetailFragment" />
+
+        <action
+            android:id="@+id/action_livestockDashboardFragment_to_safeZoneFragment"
+            app:destination="@id/safeZoneFragment" />
+
+        <action
+            android:id="@+id/action_livestockDashboardFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/auth_nav_graph"
+            app:popUpToInclusive="true" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/animalDetailFragment"
+        android:name="com.example.ecogeoguard.ui.livestock.AnimalDetailFragment"
+        android:label="Animal Details"
+        tools:layout="@layout/fragment_animal_detail">
+
+        <argument
+            android:name="animalId"
+            app:argType="string" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/safeZoneFragment"
+        android:name="com.example.ecogeoguard.ui.livestock.SafeZoneFragment"
+        android:label="Safe Zones"
+        tools:layout="@layout/fragment_safe_zone" />
+
+
+    <!-- ================= DISASTER TEAM DASHBOARD & SUB-FRAGMENTS ================= -->
+    <fragment
+        android:id="@+id/disasterDashboardFragment"
+        android:name="com.example.ecogeoguard.ui.disaster.DisasterDashboardFragment"
+        android:label="Disaster Response"
+        tools:layout="@layout/fragment_disaster_dashboard">
+
+        <action
+            android:id="@+id/action_disasterDashboardFragment_to_activeAlertsFragment"
+            app:destination="@id/activeAlertsFragment" />
+
+        <action
+            android:id="@+id/action_disasterDashboardFragment_to_evacuationMapFragment"
+            app:destination="@id/evacuationMapFragment" />
+
+        <action
+            android:id="@+id/action_disasterDashboardFragment_to_disasterSensorNetworkFragment"
+            app:destination="@id/disasterSensorNetworkFragment" />
+
+        <action
+            android:id="@+id/action_disasterDashboardFragment_to_riskAssessmentFragment"
+            app:destination="@id/riskAssessmentFragment" />
+
+        <action
+            android:id="@+id/action_disasterDashboardFragment_to_resourceManagementFragment"
+            app:destination="@id/resourceManagementFragment" />
+
+        <action
+            android:id="@+id/action_disasterDashboardFragment_to_weatherForecastFragment"
+            app:destination="@id/weatherForecastFragment" />
+
+        <action
+            android:id="@+id/action_disasterDashboardFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/auth_nav_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <!-- Disaster Team Sub-fragments -->
+    <fragment
+        android:id="@+id/activeAlertsFragment"
+        android:name="com.example.ecogeoguard.ui.disaster.ActiveAlertsFragment"
+        android:label="Active Alerts"
+        tools:layout="@layout/fragment_active_alerts" />
+
+    <fragment
+        android:id="@+id/evacuationMapFragment"
+        android:name="com.example.ecogeoguard.ui.disaster.EvacuationMapFragment"
+        android:label="Evacuation Map"
+        tools:layout="@layout/fragment_evacuation_map" />
+
+    <fragment
+        android:id="@+id/disasterSensorNetworkFragment"
+        android:name="com.example.ecogeoguard.ui.disaster.SensorNetworkFragment"
+        android:label="Sensor Network"
+        tools:layout="@layout/fragment_sensor_network" />
+
+    <fragment
+        android:id="@+id/riskAssessmentFragment"
+        android:name="com.example.ecogeoguard.ui.disaster.RiskAssessmentFragment"
+        android:label="Risk Assessment"
+        tools:layout="@layout/fragment_risk_assessment" />
+
+    <fragment
+        android:id="@+id/resourceManagementFragment"
+        android:name="com.example.ecogeoguard.ui.disaster.ResourceManagementFragment"
+        android:label="Resource Management"
+        tools:layout="@layout/fragment_resource_management" />
+
+    <fragment
+        android:id="@+id/weatherForecastFragment"
+        android:name="com.example.ecogeoguard.ui.disaster.WeatherForecastFragment"
+        android:label="Weather Forecast"
+        tools:layout="@layout/fragment_weather_forecast" />
+
+
+    <fragment
+        android:id="@+id/governmentDashboardFragment"
+        android:name="com.example.ecogeoguard.ui.government.GovernmentDashboardFragment"
+        android:label="Government Analytics"
+        tools:layout="@layout/fragment_government_dashboard">
+
+        <action
+            android:id="@+id/action_governmentDashboardFragment_to_villageAnalyticsFragment"
+            app:destination="@id/villageAnalyticsFragment" />
+
+        <action
+            android:id="@+id/action_governmentDashboardFragment_to_budgetTrackingFragment"
+            app:destination="@id/budgetTrackingFragment" />
+
+        <action
+            android:id="@+id/action_governmentDashboardFragment_to_disasterReportsFragment"
+            app:destination="@id/disasterReportsFragment" />
+
+        <action
+            android:id="@+id/action_governmentDashboardFragment_to_policyRecommendationsFragment"
+            app:destination="@id/policyRecommendationsFragment" />
+
+        <action
+            android:id="@+id/action_governmentDashboardFragment_to_stakeholderManagementFragment"
+            app:destination="@id/stakeholderManagementFragment" />
+
+        <action
+            android:id="@+id/action_governmentDashboardFragment_to_resourceMapFragment"
+            app:destination="@id/resourceMapFragment" />
+
+        <action
+            android:id="@+id/action_governmentDashboardFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/auth_nav_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <!-- Government Sub-fragments -->
+    <fragment
+        android:id="@+id/villageAnalyticsFragment"
+        android:name="com.example.ecogeoguard.ui.government.VillageAnalyticsFragment"
+        android:label="Village Analytics"
+        tools:layout="@layout/fragment_village_analytics" />
+
+    <fragment
+        android:id="@+id/budgetTrackingFragment"
+        android:name="com.example.ecogeoguard.ui.government.BudgetTrackingFragment"
+        android:label="Budget Tracking"
+        tools:layout="@layout/fragment_budget_tracking" />
+
+    <fragment
+        android:id="@+id/disasterReportsFragment"
+        android:name="com.example.ecogeoguard.ui.government.DisasterReportsFragment"
+        android:label="Disaster Reports"
+        tools:layout="@layout/fragment_disaster_reports" />
+
+    <fragment
+        android:id="@+id/policyRecommendationsFragment"
+        android:name="com.example.ecogeoguard.ui.government.PolicyRecommendationsFragment"
+        android:label="Policy Recommendations"
+        tools:layout="@layout/fragment_policy_recommendations" />
+
+    <fragment
+        android:id="@+id/stakeholderManagementFragment"
+        android:name="com.example.ecogeoguard.ui.government.StakeholderManagementFragment"
+        android:label="Stakeholder Management"
+        tools:layout="@layout/fragment_stakeholder_management" />
+
+    <fragment
+        android:id="@+id/resourceMapFragment"
+        android:name="com.example.ecogeoguard.ui.government.ResourceMapFragment"
+        android:label="Resource Map"
+        tools:layout="@layout/fragment_resource_map" />
+
+
+    <!-- ================= COMMON FRAGMENTS ================= -->
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.ecogeoguard.ui.common.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/notificationsFragment"
+        android:name="com.example.ecogeoguard.ui.common.NotificationsFragment"
+        android:label="Notifications"
+        tools:layout="@layout/fragment_notifications" />
+
+    <!-- ================= ADMIN SUB-FRAGMENTS ================= -->
+    <fragment
+        android:id="@+id/userManagementFragment"
+        android:name="com.example.ecogeoguard.ui.admin.UserManagementFragment"
+        android:label="User Management"
+        tools:layout="@layout/fragment_user_management" />
+
+    <fragment
+        android:id="@+id/villageManagerFragment"
+        android:name="com.example.ecogeoguard.ui.admin.VillageManagerFragment"
+        android:label="Village Management"
+        tools:layout="@layout/fragment_village_manager" />
+
+    <fragment
+        android:id="@+id/sensorNetworkFragment"
+        android:name="com.example.ecogeoguard.ui.admin.SensorNetworkFragment"
+        android:label="Sensor Network"
+        tools:layout="@layout/fragment_sensor_network" />
+
+    <fragment
+        android:id="@+id/analyticsFragment"
+        android:name="com.example.ecogeoguard.ui.admin.AnalyticsFragment"
+        android:label="Analytics"
+        tools:layout="@layout/fragment_analytics" />
+
+    <fragment
+        android:id="@+id/alertConfigFragment"
+        android:name="com.example.ecogeoguard.ui.admin.AlertConfigFragment"
+        android:label="Alert Configuration"
+        tools:layout="@layout/fragment_alert_config" />
+
+    <fragment
+        android:id="@+id/systemSettingsFragment"
+        android:name="com.example.ecogeoguard.ui.admin.SystemSettingsFragment"
+        android:label="System Settings"
+        tools:layout="@layout/fragment_system_settings" />
+
+</navigation>

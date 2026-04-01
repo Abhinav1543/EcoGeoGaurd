@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "286438557110",
+    "project_id": "ecogeoguard",
+    "storage_bucket": "ecogeoguard.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:286438557110:android:495d4b1e53f3eb491e2d17",
+        "android_client_info": {
+          "package_name": "com.example.ecogeoguard"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBHS1OxbnCjA49yz9Xp-0XC9ZwfyGdnuY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

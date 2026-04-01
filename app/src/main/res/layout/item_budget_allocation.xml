@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:id="@+id/tvSchemeName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="PM-KISAN"
+                android:textColor="@color/textPrimary"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvSchemeCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PM-KISAN-001"
+                android:textColor="@color/textSecondary"
+                android:textSize="11sp" />
+
+        </LinearLayout>
+
+        <!-- Amounts -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Allocated"
+                    android:textColor="@color/textSecondary"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/tvAllocated"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="₹50 L"
+                    android:textColor="@color/primaryGreen"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Utilized"
+                    android:textColor="@color/textSecondary"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/tvUtilized"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="₹32.5 L"
+                    android:textColor="@color/textPrimary"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Utilization"
+                    android:textColor="@color/textSecondary"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/tvUtilizationRate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="65%"
+                    android:textColor="@color/textPrimary"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Progress Bar -->
+        <ProgressBar
+            android:id="@+id/progressUtilization"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_marginBottom="8dp"
+            android:max="100"
+            android:progress="65"
+            android:progressTint="@color/success" />
+
+        <!-- Stats -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="4dp">
+
+            <TextView
+                android:id="@+id/tvBeneficiaries"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="2,500 beneficiaries"
+                android:textColor="@color/textSecondary"
+                android:textSize="11sp"
+                android:drawablePadding="4dp"
+                android:drawableStart="@drawable/ic_people_small" />
+
+            <TextView
+                android:id="@+id/tvVillagesCovered"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="12 villages"
+                android:textColor="@color/textSecondary"
+                android:textSize="11sp"
+                android:drawablePadding="4dp"
+                android:drawableStart="@drawable/ic_village_small" />
+
+        </LinearLayout>
+
+        <!-- Date Range -->
+        <TextView
+            android:id="@+id/tvDateRange"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Jan 2025 - Dec 2025"
+            android:textColor="@color/textSecondary"
+            android:textSize="10sp"
+            android:drawablePadding="4dp"
+            android:drawableStart="@drawable/ic_calendar" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

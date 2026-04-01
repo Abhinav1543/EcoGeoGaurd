@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Selected/Checked state -->
+    <item android:color="@color/primaryGreen" android:state_checked="true" />
+
+    <!-- Pressed state -->
+    <item android:color="@color/primaryGreenDark" android:state_pressed="true" />
+
+    <!-- Enabled but not checked -->
+    <item android:color="@color/textSecondary" android:state_enabled="true" android:state_checked="false" />
+
+    <!-- Disabled state -->
+    <item android:color="@color/textLight" android:state_enabled="false" />
+
+    <!-- Default (fallback) -->
+    <item android:color="@color/textSecondary" />
+</selector>

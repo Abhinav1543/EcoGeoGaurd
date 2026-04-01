@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_satellite"
+        android:icon="@drawable/ic_satellite"
+        android:title="Satellite"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_terrain"
+        android:icon="@drawable/ic_terrain"
+        android:title="Terrain"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_traffic"
+        android:icon="@drawable/ic_traffic"
+        android:title="Traffic"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_share"
+        android:icon="@drawable/ic_share"
+        android:title="Share Location"
+        app:showAsAction="never" />
+
+</menu>

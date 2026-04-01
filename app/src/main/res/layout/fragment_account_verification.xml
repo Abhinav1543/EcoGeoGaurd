@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_splash_gradient"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Header -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Verify Your Account"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/primaryGreen"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Complete verification to activate your account"
+            android:textColor="@color/textSecondary"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Email Status -->
+        <TextView
+            android:id="@+id/tvEmailStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email: Not Verified"
+            android:textStyle="bold"
+            android:textColor="@color/dangerRed"/>
+
+        <Button
+            android:id="@+id/btnCheckEmail"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="I have verified my email"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/textSecondary"
+            android:layout_marginVertical="24dp"/>
+
+        <!-- Phone -->
+        <EditText
+            android:id="@+id/etPhone"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Mobile number (+91XXXXXXXXXX)"
+            android:inputType="phone"
+            android:background="@drawable/bg_card"
+            android:padding="12dp"/>
+
+        <Button
+            android:id="@+id/btnSendOtp"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Send OTP"
+            android:layout_marginTop="12dp"/>
+
+        <EditText
+            android:id="@+id/etOtp"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Enter OTP"
+            android:inputType="number"
+            android:background="@drawable/bg_card"
+            android:padding="12dp"
+            android:layout_marginTop="12dp"/>
+
+        <Button
+            android:id="@+id/btnVerifyOtp"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Verify OTP"
+            android:layout_marginTop="12dp"/>
+
+
+
+        <!-- Status -->
+        <TextView
+            android:id="@+id/tvPhoneStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phone: Not Verified"
+            android:textStyle="bold"
+            android:textColor="@color/dangerRed"
+            android:layout_marginTop="12dp"/>
+        <Button
+            android:id="@+id/btnContinue"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Continue"
+            android:layout_marginTop="20dp"
+            android:enabled="false"
+            android:backgroundTint="@color/primaryGreen"
+            android:textColor="@android:color/white" />
+
+
+        <!-- Footer -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="© Kavish | EcoGeoGuard"
+            android:textSize="12sp"
+            android:textColor="@color/textSecondary"
+            android:layout_marginTop="32dp"/>
+
+    </LinearLayout>
+</ScrollView>

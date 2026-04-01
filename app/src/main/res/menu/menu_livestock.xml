@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_notifications"
+        android:icon="@drawable/ic_notifications"
+        android:title="Notifications"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_add_animal"
+        android:icon="@drawable/ic_add"
+        android:title="Add Animal"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_simulate_emergency"
+        android:icon="@drawable/ic_check"
+        android:title="Test Emergency"
+        android:visible="false"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_logout"
+        android:icon="@drawable/ic_logout"
+        android:title="Logout"
+        app:showAsAction="never" />
+
+</menu>
