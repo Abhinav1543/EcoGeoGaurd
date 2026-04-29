@@ -117,7 +117,7 @@ Gradient Boosting performed best for landslide prediction.
 
 ## System Architecture
 
-![System Architecture](assets/screenshots/Overview.png)
+
 
 A[Sensors] --> B[Arduino Processing]
 B --> C[LoRa / NB-IoT]
@@ -127,8 +127,8 @@ E --> F[Risk Detection]
 F --> G[Mobile App Alerts]
 F --> H[SMS Alerts]
 F --> I[Dashboard]
-```
 
+![System Architecture](assets/screenshots/Overview.png)
 ---
 
 ## Project Workflow
