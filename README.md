@@ -143,7 +143,7 @@ F --> I[Dashboard]
 ---
 ## App Architecture
 
-![alt text](assets/screenshots/appp.png)
+![App Diagram](assets/screenshots/appp.png)
 
 ## App Screenshots
 
