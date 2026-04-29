@@ -1,3 +1,4 @@
+
 # EcoGeoGuard 🌿🚨
 
 ### A Dual Approach to Environmental Safety and Crop Yield
@@ -7,7 +8,7 @@
 ![ML](https://img.shields.io/badge/ML-Gradient_Boosting_93.7%25-orange)
 ![License](https://img.shields.io/badge/License-Academic-lightgrey)
 
----
+📄 **Research Paper:** [View Full Research Paper](https://drive.google.com/file/d/1Qc4PCBOme077e0ut1vqB1VdWgD_SgXzf/view?usp=sharing)
 
 ## 📌 Overview
 
